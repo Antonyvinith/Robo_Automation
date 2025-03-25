@@ -23,7 +23,7 @@ ${EMAIL_REGEX}  ^[a-zA-Z0-9._%+-]+@[a-zA-Z.-]+\.[a-zA-Z]{2,}$
 
 
 *** Test Cases ***
-Retrive Users and Verify the Email Formats
+Retrieve Users and Verify the Email Formats
     ${response}=  Get On Session  Session  users
     Status Should be  200  ${response}
     ${users}=  Set Variable   ${response.json()}

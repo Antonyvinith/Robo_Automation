@@ -7,7 +7,7 @@ ${BASE_URL}=  https://jsonplaceholder.typicode.com
 
 
 *** Test Cases ***
-Retrive data and verify Count of the attributes in the User
+Retrieve data and verify Count of the attributes in the User
     Create Session  Session  ${BASE_URL}    verify=true
     ${response}=  GET On Session  Session  users/3
     ${json_dict}=  Set Variable  ${response.json()}

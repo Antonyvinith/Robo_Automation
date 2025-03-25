@@ -15,7 +15,7 @@ Retrieve User 1 and Verify the name
 
 Retrieve User 8 and Verify the name
     ${response}=  Get on Session  Session  users/8
-    Verify the name and the statusof the API  ${response}  200  Nicholas Runolfsdottir V
+    Verify the name and the status of the API  ${response}  200  Nicholas Runolfsdottir V
 
 
 

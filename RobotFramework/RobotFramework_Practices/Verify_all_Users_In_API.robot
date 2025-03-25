@@ -20,7 +20,7 @@ ${BASE_URL}=  https://jsonplaceholder.typicode.com
 
 
 *** Test Cases ***
-Retrive Users and Verify all
+Retrieve Users and Verify all
     ${response}  Get On Session  Session  users
     Status Should be  200  ${response}
 
