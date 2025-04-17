@@ -13,6 +13,9 @@ ${ADD_TO_CART_BTN}    xpath=//button[@id='add-to-cart-sauce-labs-backpack']
 ${CART_ICON}          xpath=//span[@class='shopping_cart_badge']
 ${CART_LINK}          xpath=//a[@class='shopping_cart_link']
 ${PRODUCT_IN_CART}    xpath=//div[@class='inventory_item_name' and text()='Sauce Labs Backpack']
+${ADD_ITEM1}    xpath=//button[@id='add-to-cart-sauce-labs-backpack']
+${ADD_ITEM2}    xpath=//button[@id='add-to-cart-sauce-labs-bike-light']
+
 
 *** Test Cases ***
 Verify Product Added to Cart
@@ -41,5 +44,66 @@ Verify Product Added to Cart
     Sleep    5s
     Wait Until Page Contains Element    ${PRODUCT_IN_CART}    timeout=10s
     Log To Console    Product 'Sauce Labs Backpack' found in cart.
+
+    Close Browser
+
+
+Verify Product Can Be Removed From Cart
+    Open Browser    ${URL}    Edge    executable_path=${EDGEDRIVER}
+    Maximize Browser Window
+
+    Input Text    xpath=//input[@id="user-name"]    ${USERNAME}
+    Input Text    xpath=//input[@id="password"]     ${PASSWORD}
+    Click Button  ${LGN_BTN}
+
+    Click Button  ${ADD_TO_CART_BTN}
+    Click Element  ${CART_LINK}
+    Sleep    10s
+
+    Click Button  xpath=//button[text()='Remove']
+    Sleep    10s
+
+    Element Should Not Be Visible    ${PRODUCT_IN_CART}
+    Log To Console    Product successfully removed from cart.
+
+    Close Browser
+
+
+*** Test Cases ***
+Verify Multiple Products Added to Cart
+    Open Browser    ${URL}    Edge    executable_path=${EDGEDRIVER}
+    Maximize Browser Window
+
+    Input Text    xpath=//input[@id="user-name"]    ${USERNAME}
+    Input Text    xpath=//input[@id="password"]     ${PASSWORD}
+    Click Button  ${LGN_BTN}
+
+    Click Button  ${ADD_ITEM1}
+    Click Button  ${ADD_ITEM2}
+    Sleep    2s
+
+    ${cart_count}=    Get Text    ${CART_ICON}
+    Should Be Equal As Strings    ${cart_count}    2
+    Log To Console    Cart shows correct count for multiple items.
+
+    Close Browser
+
+
+*** Test Cases ***
+Verify Multiple Products Added to Cart
+    Open Browser    ${URL}    Edge    executable_path=${EDGEDRIVER}
+    Maximize Browser Window
+
+    Input Text    xpath=//input[@id="user-name"]    ${USERNAME}
+    Input Text    xpath=//input[@id="password"]     ${PASSWORD}
+    Click Button  ${LGN_BTN}
+
+    Click Button  ${ADD_ITEM1}
+    Click Button  ${ADD_ITEM2}
+    Sleep    2s
+
+    ${cart_count}=    Get Text    ${CART_ICON}
+    Should Be Equal As Strings    ${cart_count}    2
+    Log To Console    Cart shows correct count for multiple items.
 
     Close Browser
