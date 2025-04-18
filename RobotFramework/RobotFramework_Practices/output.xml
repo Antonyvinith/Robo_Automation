@@ -1,173 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.6 on win32)" generated="2025-04-17T13:45:43.859669" rpa="false" schemaversion="5">
-<suite id="s1" name="WebTesting Verify Cart" source="C:\Users\antony.vinith\PycharmProjects\PythonProject\RobotFramework\RobotFramework_Practices\WebTesting_Verify_Cart.robot">
-<test id="s1-t1" name="Verify Multiple Products Added to Cart" line="73">
+<robot generator="Robot 7.2.2 (Python 3.12.6 on win32)" generated="2025-04-17T15:24:55.583401" rpa="false" schemaversion="5">
+<suite id="s1" name="Web Testing Register user" source="C:\Users\antony.vinith\PycharmProjects\PythonProject\RobotFramework\RobotFramework_Practices\Web_Testing_Register_user.robot">
+<test id="s1-t1" name="Register And Login" line="12">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-17T13:45:44.172028" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
-<msg time="2025-04-17T13:45:44.173026" level="INFO">Opening browser 'Edge' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2025-04-17T15:24:55.871136" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/'.</msg>
 <arg>${URL}</arg>
-<arg>Edge</arg>
-<arg>executable_path=${EDGEDRIVER}</arg>
+<arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-17T13:45:44.172028" elapsed="3.623490"/>
+<status status="PASS" start="2025-04-17T15:24:55.871136" elapsed="3.361022"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-17T13:45:47.795518" elapsed="0.123199"/>
+<status status="PASS" start="2025-04-17T15:24:59.232158" elapsed="0.064662"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-17T13:45:47.923265" level="INFO">Typing text 'standard_user' into text field 'xpath=//input[@id="user-name"]'.</msg>
-<arg>xpath=//input[@id="user-name"]</arg>
-<arg>${USERNAME}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T13:45:47.921264" elapsed="0.313421"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-17T13:45:48.235687" level="INFO">Typing text 'secret_sauce' into text field 'xpath=//input[@id="password"]'.</msg>
-<arg>xpath=//input[@id="password"]</arg>
-<arg>${PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T13:45:48.235687" elapsed="0.159684"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-17T13:45:48.396379" level="INFO">Clicking button 'xpath=//input[@id='login-button']'.</msg>
-<arg>${LGN_BTN}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T13:45:48.395371" elapsed="0.140681"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-17T13:45:48.537055" level="INFO">Clicking button 'xpath=//button[@id='add-to-cart-sauce-labs-backpack']'.</msg>
-<arg>${ADD_ITEM1}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T13:45:48.536052" elapsed="0.117200"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-17T13:45:48.654253" level="INFO">Clicking button 'xpath=//button[@id='add-to-cart-sauce-labs-bike-light']'.</msg>
-<arg>${ADD_ITEM2}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T13:45:48.654253" elapsed="0.091425"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-17T15:24:59.298753" level="INFO">Clicking element 'xpath=//a[text()='Sign up']'.</msg>
+<arg>xpath=//a[text()='Sign up']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-17T15:24:59.297755" elapsed="0.373478"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-17T13:45:50.748896" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-04-17T15:25:04.672764" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-17T15:24:59.672238" elapsed="5.000526"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-17T15:25:04.674874" level="INFO">Typing text 'Antony' into text field 'id=sign-username'.</msg>
+<arg>id=sign-username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-17T15:25:04.673892" elapsed="0.299290"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-17T15:25:04.974183" level="INFO">Typing text 'password123' into text field 'id=sign-password'.</msg>
+<arg>id=sign-password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-17T15:25:04.973182" elapsed="0.265330"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-17T15:25:10.242130" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-17T15:25:05.239998" elapsed="5.002132"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-17T15:25:10.243256" level="INFO">Clicking button 'xpath=//button[text()='Sign up']'.</msg>
+<arg>xpath=//button[text()='Sign up']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-17T15:25:10.242130" elapsed="0.135208"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-17T15:25:15.378954" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-17T15:25:10.378440" elapsed="5.000514"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-17T15:25:15.688823" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-17T15:25:15.688823" level="FAIL">Page should have contained text 'Welcome' but did not.</msg>
+<arg>Welcome</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2025-04-17T15:25:15.380451" elapsed="0.313028">Page should have contained text 'Welcome' but did not.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//a[text()='Log in']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-04-17T15:25:15.693479" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-04-17T15:25:15.694514" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-04-17T15:25:15.695528" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//button[text()='Log in']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-04-17T15:25:15.695528" elapsed="0.000946"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-17T13:45:48.746218" elapsed="2.002678"/>
+<status status="NOT RUN" start="2025-04-17T15:25:15.697529" elapsed="0.000000"/>
 </kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-04-17T13:45:50.813706" level="INFO">${cart_count} = 2</msg>
-<var>${cart_count}</var>
-<arg>${CART_ICON}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T13:45:50.749912" elapsed="0.063794"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${cart_count}</arg>
-<arg>2</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-04-17T13:45:50.816246" elapsed="0.000997"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Cart shows correct count for multiple items.</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-04-17T13:45:50.819255" elapsed="0.001001"/>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Welcome</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-04-17T15:25:15.697529" elapsed="0.000000"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-04-17T13:45:50.821242" elapsed="2.442181"/>
+<status status="NOT RUN" start="2025-04-17T15:25:15.698653" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-04-17T13:45:44.171093" elapsed="9.093678"/>
+<status status="FAIL" start="2025-04-17T15:24:55.870138" elapsed="19.829572">Page should have contained text 'Welcome' but did not.</status>
 </test>
-<test id="s1-t2" name="Verify Multiple Products Added to Cart" line="93">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-17T13:45:53.268547" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
-<msg time="2025-04-17T13:45:53.269598" level="INFO">Opening browser 'Edge' to base url 'https://www.saucedemo.com/'.</msg>
-<arg>${URL}</arg>
-<arg>Edge</arg>
-<arg>executable_path=${EDGEDRIVER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-17T13:45:53.268547" elapsed="3.546696"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-17T13:45:56.817382" elapsed="0.145409"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-17T13:45:56.965337" level="INFO">Typing text 'standard_user' into text field 'xpath=//input[@id="user-name"]'.</msg>
-<arg>xpath=//input[@id="user-name"]</arg>
-<arg>${USERNAME}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T13:45:56.964313" elapsed="0.279689"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-17T13:45:57.244002" level="INFO">Typing text 'secret_sauce' into text field 'xpath=//input[@id="password"]'.</msg>
-<arg>xpath=//input[@id="password"]</arg>
-<arg>${PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T13:45:57.244002" elapsed="0.158114"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-17T13:45:57.405442" level="INFO">Clicking button 'xpath=//input[@id='login-button']'.</msg>
-<arg>${LGN_BTN}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T13:45:57.404442" elapsed="0.237174"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-17T13:45:57.642607" level="INFO">Clicking button 'xpath=//button[@id='add-to-cart-sauce-labs-backpack']'.</msg>
-<arg>${ADD_ITEM1}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T13:45:57.642607" elapsed="0.162355"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-17T13:45:57.807526" level="INFO">Clicking button 'xpath=//button[@id='add-to-cart-sauce-labs-bike-light']'.</msg>
-<arg>${ADD_ITEM2}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T13:45:57.806506" elapsed="0.132529"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-17T13:45:59.940257" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-17T13:45:57.940050" elapsed="2.000207"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-04-17T13:45:59.965336" level="INFO">${cart_count} = 2</msg>
-<var>${cart_count}</var>
-<arg>${CART_ICON}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T13:45:59.940257" elapsed="0.025079"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${cart_count}</arg>
-<arg>2</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-04-17T13:45:59.965336" elapsed="0.000000"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Cart shows correct count for multiple items.</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-04-17T13:45:59.965336" elapsed="0.001005"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-04-17T13:45:59.966341" elapsed="2.424025"/>
-</kw>
-<status status="PASS" start="2025-04-17T13:45:53.266294" elapsed="9.125381"/>
-</test>
-<status status="PASS" start="2025-04-17T13:45:43.860652" elapsed="18.531023"/>
+<status status="FAIL" start="2025-04-17T15:24:55.585402" elapsed="20.115383"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="WebTesting Verify Cart" id="s1" pass="2" fail="0" skip="0">WebTesting Verify Cart</stat>
+<stat name="Web Testing Register user" id="s1" pass="0" fail="1" skip="0">Web Testing Register user</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-04-17T13:45:44.172028" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
-<msg time="2025-04-17T13:45:53.266294" level="WARN">Multiple tests with name 'Verify Multiple Products Added to Cart' executed in suite 'WebTesting Verify Cart'.</msg>
-<msg time="2025-04-17T13:45:53.268547" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
 </errors>
 </robot>
